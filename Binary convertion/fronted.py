@@ -19,25 +19,19 @@ frame.geometry('350x200')
 
 
 def printOuput(): 
-	base10=float(inputtxt.get(1.0, "end-1c"))
+	base10=float(inputtxt.get())
 	lbl.config(text = binary_convo(base10))
 	lbl.pack() 
 
-
+#Entry creation
+inputtxt=tk.Entry(frame, width = 55,bg=GREY)
 # TextBox Creation 
-inputtxt = tk.Text(frame, 
-				height = -15,
-				width = 55,
-    			bg=GREY,
-       			highlightcolor="GREEN") 
-inputtxt.insert("1.0","Enter a number to convert to binary")  
+inputtxt.insert(0,"Enter a number to convert to binary")  
 
 inputtxt.pack(fill="both") 
 
 # Button Creation 
-printButton = tk.Button(frame, 
-						text = "Enter", 
-						command = printOuput) 
+printButton = tk.Button(frame, text = "Enter", command = printOuput) 
 printButton.pack()  
 
 frame['background']=DARK_GREY
