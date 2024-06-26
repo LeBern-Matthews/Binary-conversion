@@ -36,9 +36,7 @@ inputtxt.insert(0,"Enter a number to convert to binary")
 inputtxt.pack(fill="both") 
 
 # Button Creation 
-printButton = tk.Button(frame, 
-						text = "Enter", 
-						command = printOuput) 
+printButton = tk.Button(frame, text = "Enter", command = printOuput) 
 printButton.pack()  
 
 frame['background']=DARK_GREY
